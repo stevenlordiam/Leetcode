@@ -1,15 +1,15 @@
-#LeetcodeOJ
+###LeetcodeOJ
 ==========
-Leetcode Online Judge
+
+My solutions to Leetcode Online Judge
 
 Some useful website:
 
-*
-https://oj.leetcode.com/
+*[LeetcodeOJ](https://oj.leetcode.com/)
 
-*
-http://answer.ninechapter.com/
+*[九章算法](http://answer.ninechapter.com/)
 
-*
-http://leetcodenotes.wordpress.com/
+*[http://leetcodenotes.wordpress.com/](http://leetcodenotes.wordpress.com/)
 
+-----------------------------------------
+Started on Sep 16th, 2014
