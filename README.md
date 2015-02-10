@@ -7,9 +7,5 @@ Some useful website:
 
 *[LeetcodeOJ](https://oj.leetcode.com/)
 
-*[九章算法](http://answer.ninechapter.com/)
-
-*[http://leetcodenotes.wordpress.com/](http://leetcodenotes.wordpress.com/)
-
 -----------------------------------------
-Started on Sep 16th, 2014
+Started on Feb 9th, 2015
