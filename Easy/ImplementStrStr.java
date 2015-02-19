@@ -39,5 +39,5 @@ In total there are (n-m+1) substring. Time complexity is O((n-m+1)*m)=O(n*m), sp
 Reference:
 http://www.ninechapter.com/solutions/implement-strstr/
 https://yusun2015.wordpress.com/2015/01/15/implement-strstr/
-http://blog.csdn.net/linhuanmars/article/details/20276833
+(rolling hash method)http://blog.csdn.net/linhuanmars/article/details/20276833
 */
