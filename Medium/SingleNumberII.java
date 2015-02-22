@@ -14,7 +14,7 @@ public class SingleNumberII {
         int[] bits=new int[32];
         for (int i = 0; i < 32; i++) {
             for(int j = 0; j < A.length; j++) {
-                bits[i] += (A[j] >> i) & 1;     // get the i-th bit of A[j]    
+                bits[i] += (A[j] >> i) & 1;     // get the i-th bit of A[j] (THIS IS IMPORTANT!!!) 
                 bits[i] %= 3;                   // if appear 3 times it's 0, if only once it's 1
             }
             result |= (bits[i] << i);           // assemble the bits array to result integer
