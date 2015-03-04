@@ -36,6 +36,9 @@ public class PathSum {
 }
 
 /*
+Similar to Path Sum II - https://oj.leetcode.com/problems/path-sum-ii/
+Similar to CC150 (4-9) path sum (TreesAndGraphs_9)
+
 这道题是树操作的题目，判断是否从根到叶子的路径和跟给定sum相同的。还是用常规的递归方法来做，(树的遍历一般都用递归解法)
 递归条件是看左子树或者右子树有没有满足条件的路径，也就是子树路径和等于当前sum减去当前节点的值。
 结束条件是如果当前节点是空的，则返回false，如果是叶子，那么如果剩余的sum等于当前叶子的值，则找到满足条件的路径，返回true。
