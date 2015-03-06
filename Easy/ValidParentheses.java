@@ -40,6 +40,8 @@ public class ValidParentheses {
 }
 
 /*
+Similar to CC150 (9-6) valid parentheses - (RecursionAndDynamicProgramming_6.java)
+
 Using a stack to store is a GOOD solution!
 REMEMBER to check whether the stack is empty at last
 
