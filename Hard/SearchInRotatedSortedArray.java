@@ -28,8 +28,9 @@ public class SearchInRotatedSortedArray {
 }
 
 /*
+Simialr to CC150 (11-3) find element in sorted array (SortingAndSearching_3)
+
 Similar to Search in Rotated Sorted Array II and Find Minimum in Sorted Rotated Array I/II
-CC150 - (11.3)
 
 这个题尽管是CC150上的，理论上很简单，但是想明白（而且用好的方法）很不容易。
 1. 数组没有重复

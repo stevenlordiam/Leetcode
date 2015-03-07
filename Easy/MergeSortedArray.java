@@ -25,6 +25,7 @@ public class MergeSortedArray {
 }
 
 /*
+Similar to CC150 (11-1) merge two sorted array - (SortingAndSearching_1.java)
 The key idea is instead starting merging from the front, starting from the end, as the end of A is empty. 
 Starting from the end is because that the result is still stored in A, if starting from the front, some unchecked elements may be overlapped.
 Time complexity is O(m+n), Space complexity is O(1). Similiar to Merge Two Sorted Lists.

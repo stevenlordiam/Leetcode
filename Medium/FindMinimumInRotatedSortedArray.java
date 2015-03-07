@@ -28,6 +28,8 @@ public class FindMinimumInRotatedSortedArray {      // binary search
 }
 
 /*
+Simialr to CC150 (11-3) find element in sorted array (SortingAndSearching_3)
+
 Similar to Search in Rotated Sorted Array - https://oj.leetcode.com/problems/search-in-rotated-sorted-array/
 Find Minimum in Rotated Sorted Array II - https://oj.leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
 
