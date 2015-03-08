@@ -32,7 +32,8 @@ public class SearchA2DMatrix {
 
 /*
 Similar to Search in Rotated Sorted Array I/II, Find Minimum in Sorted Rotated Array I/II, Search Insert Position, Search For A Range
-CC150 - (11.3)
+
+Similar to CC150 (11.6) search a 2D matrix (SortingAndSearching_6.java)
 
 这道题是二分查找Search Insert Position的题目，因为矩阵是行有序并且列有序，查找只需要先按行查找，定位出在哪一行之后再进行列查找即可，
 所以就是进行两次二分查找。时间复杂度是O(logm+logn)，空间上只需两个辅助变量，因而是O(1)
