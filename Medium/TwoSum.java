@@ -39,6 +39,8 @@ public class TwoSum {
 }
 
 /* 
+Similar to CC150 (17-12)
+
 Note:
 Pay attention to the time complexity!
 Cannot use direct adding like: if(numbers[i]+numbers[j]==target), 
@@ -53,4 +55,3 @@ O(n) runtime, O(n) space – Hash table:
 We could reduce the runtime complexity of looking up a value to O(1) using a hash map that maps a value to its index.
 
 */
-

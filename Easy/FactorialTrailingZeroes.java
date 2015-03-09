@@ -18,6 +18,8 @@ public class FactorialTrailingZeroes {
 }
 
 /*
+Similar to CC150 (17-3)
+
 Need to find how many 5s there are as factor of n!
 
 10 is the product of 2 and 5. In n!, we need to know how many 2 and 5, and the number of zeros is the minimum of the number of 2 and the number of 5.
