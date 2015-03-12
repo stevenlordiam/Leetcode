@@ -24,6 +24,7 @@ public class MaximumSubarray {					// Dynamic Programming
 /*
 Dynamic Programming
 
+Similar to Maximum Subarray - https://leetcode.com/problems/maximum-product-subarray/
 Similar to Best Time To Buy And Sell Stock I / II / III
 
 这是一道非常经典的动态规划的题目，用到的思路我们在别的动态规划题目中也很常用，以后我们称为”局部最优和全局最优解法“
