@@ -28,6 +28,9 @@ public class ContainerWithMostWater {
 }
 
 /*
+Similar to Largest Rectangle in Histogram - https://leetcode.com/problems/largest-rectangle-in-histogram/
+Container With Most Water - https://leetcode.com/problems/container-with-most-water/
+
 首先一般我们都会想到brute force的方法，对每一对pair都计算一次容积，然后去最大的那个，总共有n*(n-1)/2对pair，所以时间复杂度是O(n^2)。 
 接下来我们考虑如何优化。思路有点类似于Two Sum中的第二种方法--夹逼。从数组两端走起，每次迭代时判断左pointer和右pointer指向的数字哪个大，
 如果左pointer小，意味着向左移动右pointer不可能使结果变得更好，因为瓶颈在左pointer，移动右pointer只会变小，所以这时候我们选择左pointer右移。
