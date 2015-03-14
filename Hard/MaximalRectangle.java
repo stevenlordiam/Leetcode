@@ -29,14 +29,14 @@ public class MaximalRectangle {
                     S.pop();
                     answer = Math.max(answer, height[i][pos]*(S.empty()? j : j-S.peek()-1));  // ???
                 }
-                S.push(j);
+                S.push(j); // 0 to m-1
             }
             while (!S.empty()) {
                 int pos = S.peek();
                 S.pop();
                 answer = Math.max(answer, height[i][pos]*(S.empty()? m : m-S.peek()-1));
-            }
-        }
+            }   // check for last element m
+        } 
         return answer;
     }
 }

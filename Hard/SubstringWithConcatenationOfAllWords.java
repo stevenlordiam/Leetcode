@@ -14,7 +14,8 @@ public class SubstringWithConcatenationOfAllWords {         // ???
         ArrayList<Integer> result = new ArrayList<Integer>();
         HashMap<String, Integer> toFind = new HashMap<String, Integer>();
         HashMap<String, Integer> found = new HashMap<String, Integer>();
-        int m = L.length, n = L[0].length();
+        int m = L.length;           // num of words 
+        int n = L[0].length();      // length of each word
         for (int i = 0; i < m; i ++){
             if (!toFind.containsKey(L[i])){
                 toFind.put(L[i], 1);
@@ -23,12 +24,11 @@ public class SubstringWithConcatenationOfAllWords {         // ???
                 toFind.put(L[i], toFind.get(L[i]) + 1);
             }
         }
-        for (int i = 0; i <= S.length() - n * m; i ++){
-            found.clear();
-            int j;
-            for (j = 0; j < m; j ++){
+        for (int i = 0; i <= S.length() - n * m; i++){      // scan
+            found.clear();      // clear the hashmap
+            for (int j = 0; j < m; j ++){
                 int k = i + j * n;
-                String stub = S.substring(k, k + n);
+                String stub = S.substring(k, k + n);        // substring
                 if (!toFind.containsKey(stub)) break;
                 if(!found.containsKey(stub)){
                     found.put(stub, 1);
@@ -36,10 +36,10 @@ public class SubstringWithConcatenationOfAllWords {         // ???
                 else{
                     found.put(stub, found.get(stub) + 1);
                 }
-                if (found.get(stub) > toFind.get(stub)) break;
+                if (found.get(stub) > toFind.get(stub)) break;  // match
             }
-            if (j == m) result.add(i);
-        }
+            if (j == m) result.add(i);  // if still can go to last element(without break in loop meaning that all previous characters are matching), add the last element to result
+        }   // remember to check for the last element!!!
         return result;
     }
 }
