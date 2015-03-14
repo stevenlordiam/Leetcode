@@ -38,6 +38,8 @@ public class SwapNodesInPairs {
 }
 
 /*
+Similar to Reverse Nodes in k-Group - https://leetcode.com/problems/reverse-nodes-in-k-group/
+
 这道题属于链表操作的题目，思路比较清晰，就是每次跳两个节点，后一个接到前面，前一个接到后一个的后面，最后现在的后一个（也就是原来的前一个）接到下下个结点（如果没有则接到下一个）。
 这道题中用了一个辅助指针作为表头，这是链表中比较常用的小技巧，因为这样可以避免处理head的边界情况，一般来说要求的结果表头会有变化的会经常用这个技巧，大家以后会经常遇到。
 时间复杂度是O(n)，空间复杂度是O(1)。
