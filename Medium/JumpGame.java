@@ -29,6 +29,8 @@ public class JumpGame {						// greedy
 
 
 /*
+Similar to Jump Game II - https://leetcode.com/problems/jump-game-ii/
+
 DP / Greedy Algorithm
 
 没必要把每个i能不能走到都算出来，只要算出最后一跳能不能>=n就行了。
