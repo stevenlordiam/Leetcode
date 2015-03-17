@@ -39,7 +39,7 @@ public class TwoSum {
 }
 
 /* 
-Similar to CC150 (17-12)
+Similar to CC150 (17-12) -> 先排序后查找！！！
 
 Note:
 Pay attention to the time complexity!

@@ -42,6 +42,8 @@ public class MaximalRectangle {
 }
 
 /*
+Similar to CC150 (18-11) Maximal Rectangle
+
 Similar to Largest Rectangle in Histogram - https://leetcode.com/problems/largest-rectangle-in-histogram/
 
 算法：
