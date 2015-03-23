@@ -22,13 +22,13 @@ public class PermutationsII {
             return;
         }
         for(int i=0;i<num.length;i++){
-            if(i>0 && !used[i-1] && num[i]==num[i-1]) continue;		// 跳过重复元素(???) 保证不会出现重复解（比如[112],[112] -> 第一个1分别出现在第一位和第二位形成的重复解）
+            if(i>0 && !used[i-1] && num[i]==num[i-1]) continue;		// 跳过重复元素 保证不会出现重复解（比如[112],[112] -> 第一个1分别出现在第一位和第二位形成的重复解）
             if(!used[i]){
                 used[i] = true;
                 item.add(num[i]);
                 helper(num, used, item, res);
                 item.remove(item.size()-1);			// backtracking, remove last element
-                used[i] = false;
+                used[i] = false;    // 改成false表示现在不在用这个元素
             }
         }
     }

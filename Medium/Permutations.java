@@ -30,7 +30,7 @@ public class Permutations {
             }
             list.add(num[i]);
             helper(rst, list, num);
-            list.remove(list.size() - 1);   // 递归之后要移除 (???)
+            list.remove(list.size() - 1);   // 递归之后要移除 
         }   // 回溯法这种题目都是使用这个套路，就是用一个循环去枚举当前所有情况，然后把元素加入，递归，再把元素移除
             // http://blog.csdn.net/u010500263/article/details/18178243
     }
