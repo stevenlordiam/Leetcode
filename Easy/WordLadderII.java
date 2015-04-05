@@ -40,8 +40,9 @@ public class WordLadderII {
             String start, Map<String, Integer> distance,
             Map<String, List<String>> map) {
         path.add(crt);
-        if (crt.equals(start)) {        // (???) 参见九章算法6-Graph & Search
+        if (crt.equals(start)) {        // 参见九章算法6-Graph & Search
             // 使用crt在DFS过程记录每个节点，当遇到end时，反向遍历到start并将这个路径加入结果
+            // 反向DFS，具体分析见九章算法笔记
             Collections.reverse(path);
             ladders.add(new ArrayList<String>(path));
             Collections.reverse(path);

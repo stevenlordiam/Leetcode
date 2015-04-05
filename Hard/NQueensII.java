@@ -4,7 +4,7 @@ Follow up for N-Queens problem.
 Now, instead outputting board configurations, return the total number of distinct solutions.
 */
 
-public class NQueensII {    // (???) - 九章算法6 - Graph & Search
+public class NQueensII {    // 九章算法6 - Graph & Search
     public static int sum;
     public int totalNQueens(int n) {
         sum = 0;

@@ -17,7 +17,7 @@ For example, there exist two distinct solutions to the 4-queens puzzle:
 ]
 */
 
-public class NQueens {      // (???) - 九章算法6 - Graph & Search
+public class NQueens {      // 九章算法6 - Graph & Search
     private String[] drawChessboard(ArrayList<Integer> cols) {
         String[] chessboard = new String[cols.size()];
         for (int i = 0; i < cols.size(); i++) {
@@ -41,7 +41,7 @@ public class NQueens {      // (???) - 九章算法6 - Graph & Search
                 return false;
             }
             // left-top to right-bottom
-            if (i - cols.get(i) == row - col) {     // ???
+            if (i - cols.get(i) == row - col) {     
                 return false;
             }
             // right-top to left-bottom
