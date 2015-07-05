@@ -79,4 +79,5 @@ http://www.cnblogs.com/AnnieKim/archive/2013/04/21/3034631.html
 http://www.ninechapter.com/solutions/first-missing-positive/
 http://blog.csdn.net/linhuanmars/article/details/20884585
 https://yusun2015.wordpress.com/2015/01/15/first-missing-positive/
+http://blog.csdn.net/kenden23/article/details/17099987
 */
