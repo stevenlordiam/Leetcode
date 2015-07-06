@@ -5,7 +5,7 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 */
 
 public class ClimbStairs {
-    public int climbStairs(int n) {
+    public int climbStairs(int n) { // Recursion: O(2^N), DP: O(N)
         int stepOne = 1;
         int stepTwo = 2;
         if(n<=1){
