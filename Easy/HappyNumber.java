@@ -58,6 +58,30 @@ public boolean isHappy(int n) {
     return n == 1;
 }
 
+// nine chapter solution
+public class Solution {
+    private int getNextHappy(int n) {
+        int sum = 0;
+        while (n != 0) {
+            sum += (n % 10) * (n % 10);
+            n /= 10;
+        }
+        return sum;
+    }
+    
+    public boolean isHappy(int n) {
+        HashSet<Integer> hash = new HashSet<Integer>();
+        while (n != 1) {
+            if (hash.contains(n)) {
+                return false;
+            }
+            hash.add(n);
+            n = getNextHappy(n);
+        }
+        return true;
+    }
+}
+
 Reference:
 https://leetcode.com/discuss/33055/my-solution-in-c-o-1-space-and-no-magic-math-property-involved
 https://leetcode.com/discuss/32842/use-the-same-way-as-checking-cycles-in-a-linked-list

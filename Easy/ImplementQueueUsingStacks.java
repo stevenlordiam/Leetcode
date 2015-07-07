@@ -15,16 +15,19 @@ You may assume that all operations are valid (for example, no pop or peek operat
 public class ImplementQueueUsingStacks {
     private Stack<Integer> stack1;
     private Stack<Integer> stack2;
+    
     public void stack2ToStack1() {
 		while (! stack2.empty()) {
 			stack1.push(stack2.peek());
 			stack2.pop();
 		}
 	}
+
     public ImplementQueueUsingStacks() {
        stack1 = new Stack<Integer>();
        stack2 = new Stack<Integer>();
     }
+
     public void push(int number) {
         stack2.push(number);
     }
