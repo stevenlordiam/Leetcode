@@ -8,10 +8,8 @@ public class ValidParentheses {
     	if(s==null || s.length()==0)			// for a string, always check for null and zero-length
         	return true;				
     	LinkedList<Character> stack = new LinkedList<Character>();
-    	for(int i=0;i<s.length();i++)
-    	{
-        	switch(s.charAt(i))
-        	{
+    	for(int i=0;i<s.length();i++) {
+        	switch(s.charAt(i)) {
             	case '(':
             	case '{':
             	case '[':
