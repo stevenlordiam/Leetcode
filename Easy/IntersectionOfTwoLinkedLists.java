@@ -1,7 +1,6 @@
 /*
 Write a program to find the node at which the intersection of two singly linked lists begins.
 
-
 For example, the following two linked lists:
 
 A:          a1 → a2
@@ -48,7 +47,7 @@ public class IntersectionOfTwoLinkedLists {
         c1=headA;						// redirect to the head
         c2=headB;
         while(lenA>lenB){				// stop at the intersection point if there is
-            c1=c1.next;
+            c1=c1.next;                 // make A, B the same length
             lenA--;
         }
         while(lenB>lenA){

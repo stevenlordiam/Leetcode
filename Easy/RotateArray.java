@@ -16,7 +16,7 @@ public class RotateArray {
             return;
         }
         k = k % nums.length;				                    // in case that k>nums.length
-        reverse(nums, 0, nums.length-k-1);
+        reverse(nums, 0, nums.length-k-1);                      // 三次翻转
         reverse(nums, nums.length-k, nums.length-1);
         reverse(nums, 0, nums.length-1);
     }

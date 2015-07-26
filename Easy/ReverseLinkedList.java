@@ -16,7 +16,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 public class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {	// iterativve
         ListNode newHead = null;
-    	while(head != null){
+    	while(head != null) {
         	ListNode next = head.next;
         	head.next = newHead;
         	newHead = head;

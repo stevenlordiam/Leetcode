@@ -19,7 +19,7 @@ public class RomanToInteger {
 	    m.put('M', 1000);
 
 	    int length = s.length();
-	    int result = m.get(s.charAt(length - 1));
+	    int result = m.get(s.charAt(length - 1));		// 初始赋值为最后一个element
 	    for (int i = length - 2; i >= 0; i--) {
 	        if (m.get(s.charAt(i + 1)) <= m.get(s.charAt(i))) {
 	            result += m.get(s.charAt(i));

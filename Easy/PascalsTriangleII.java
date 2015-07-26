@@ -7,17 +7,14 @@ Return [1,3,3,1].
 Note:
 Could you optimize your algorithm to use only O(k) extra space?
 */
-
 public class PascalsTriangleII {
     public ArrayList<Integer> getRow(int rowIndex) {
         ArrayList<Integer> res = new ArrayList<Integer>();
         if(rowIndex<0)
             return res;
         res.add(1);
-        for(int i=1;i<=rowIndex;i++)
-        {
-            for(int j=res.size()-2;j>=0;j--)
-            {
+        for(int i=1;i<=rowIndex;i++) {          // 依次算出各层的值，返回最后一层的值
+            for(int j=res.size()-2;j>=0;j--) {
                 res.set(j+1,res.get(j)+res.get(j+1));           // arraylist.set(i, int)
             }
             res.add(1);             // add the final '1' of the row

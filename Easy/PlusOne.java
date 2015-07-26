@@ -27,5 +27,5 @@ public class PlusOne {
 Notice:
 If it is [9,9], output should be [1,0,0]. Should check the carry.
 Check: (print out array)
-System.out.print(java.util.Arrays.toString(plusOne(digits)));
+System.out.print(Arrays.toString(plusOne(digits)));
 */

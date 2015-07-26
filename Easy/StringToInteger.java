@@ -39,12 +39,6 @@ public class StringToInteger {
     }
 }
 
-
-
-
-
-
-
 /*
 Two things to consider about integer: 
 1) +/- sign	2) overflow

@@ -21,7 +21,7 @@ public class Solution {
 		ListNode next = node.next;
 		node.val=next.val; 				// copy node data to the next node
 		node.next=next.next; 			// copy node reference to the next node, which is deleting the current node
-	}
+	}   								// 把next值copy给node然后删掉next
 }
 
 /*

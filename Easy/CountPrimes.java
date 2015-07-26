@@ -10,7 +10,7 @@ Sieve of Eratosthenes (http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 public class CountPrimes {
     public int countPrimes(int n) {
         int count=0;
-        boolean[] nums = new boolean[n];
+        boolean[] nums = new boolean[n];    // default is false
         for(int i=2; i<nums.length; i++){
             if(!nums[i]){
                 count++;

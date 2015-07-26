@@ -10,7 +10,7 @@ A valid Sudoku board (partially filled) is not necessarily solvable. Only the fi
 public class ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
         boolean[] visited = new boolean[9];			// use boolean array to store every nine element set(row, column and sub matrix)
-        
+                                                    // 用长度为9的boolean array记录有没有重复数字，出现某个数字就标为visited，再次出现即为重复数字，return false
         for(int i = 0; i<9; i++){ 					// row
             Arrays.fill(visited, false);
             for(int j = 0; j<9; j++){

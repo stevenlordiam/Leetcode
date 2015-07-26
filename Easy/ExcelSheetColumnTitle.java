@@ -14,7 +14,7 @@ For example:
 
 public class ExcelSheetColumnTitle {
     public static String convertToTitle(int n) {
-        StringBuilder s=new StringBuilder();
+        StringBuilder s = new StringBuilder();
         if(n<=0){
             return "";
         }
