@@ -22,7 +22,7 @@ public class KthSmallestElementInABST {
 		helper(root);
 		return res;
 	}
-	public void helper (TreeNode root) { 	// in order traversal
+	public void helper (TreeNode root) { 	// inorder traversal
 		if (root == null) return;
 		helper(root.left);
 		if (--count == 0) res = root.val;

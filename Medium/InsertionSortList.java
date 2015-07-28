@@ -13,7 +13,7 @@ Sort a linked list using insertion sort.
  *     }
  * }
  */
-public class Solution {
+public class InsertionSortList {
     public ListNode insertionSortList(ListNode head) {
         ListNode dummy = new ListNode(0);
         while (head != null) {

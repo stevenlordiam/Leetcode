@@ -16,16 +16,16 @@ In a complete binary tree every level, except possibly the last, is completely f
  */
 public class CountCompleteTreeNodes { 	// O(log(n)^2)
     public int height(TreeNode root) {
-        return root == null ? -1 : 1 + height(root.left);
+        return root == null ? -1 : 1 + height(root.left);   // full binary tree只可能在右边缺少node
     }
     public int countNodes(TreeNode root) {
         int nodes = 0, h = height(root);
         while (root != null) {
-            if (height(root.right) == h - 1) {
-                nodes += 1 << h;
+            if (height(root.right) == h - 1) {  // 右边不缺少node
+                nodes += 1 << h;        // 1 << h : 2^h
                 root = root.right;
             } else {
-                nodes += 1 << h-1;
+                nodes += 1 << h-1;      // 右边缺少node
                 root = root.left;
             }
             h--;

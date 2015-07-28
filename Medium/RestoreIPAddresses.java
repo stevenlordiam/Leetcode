@@ -7,7 +7,7 @@ Given "25525511135",
 return ["255.255.11.135", "255.255.111.35"]. (Order does not matter)
 */ 
 
-public class EestoreIPAddresses {
+public class RestoreIPAddresses {
     public ArrayList<String> restoreIpAddresses(String s) {
         ArrayList<String> result = new ArrayList<String>();
         ArrayList<String> list = new ArrayList<String>();
@@ -34,7 +34,7 @@ public class EestoreIPAddresses {
             return;
         }
         
-        for(int i=start; i<s.length() && i<= start+3; i++){
+        for(int i=start; i < s.length() && i <= start+3; i++) {
             String tmp = s.substring(start, i+1);
             if(isvalid(tmp)){
                 list.add(tmp);

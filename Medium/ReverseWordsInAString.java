@@ -21,7 +21,7 @@ public class Solution {
         }
         
         String[] strs = s.trim().split(" "); 		// store words in array
-        StringBuilder res = new StringBuilder();
+        StringBuilder res = new StringBuilder();    // 不用写reverse string[] 函数，直接用StringBuilder反向append
         for (int i = strs.length - 1; i>=0; i--){
             if (!strs[i].equals("")) {
                 res.append(strs[i]).append(" "); 	// word + whitespaces between words 

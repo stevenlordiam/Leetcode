@@ -6,7 +6,7 @@ For example, given the range [5, 7], you should return 4.
 
 public class BitwiseANDOfNumbersRange {
     public int rangeBitwiseAnd(int m, int n) {
-        if(m == 0){
+        if(m == 0) {
             return 0;
         }
         int moveFactor = 1;

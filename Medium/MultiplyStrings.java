@@ -4,7 +4,7 @@ Given two numbers represented as strings, return multiplication of the numbers a
 Note: The numbers can be arbitrarily large and are non-negative.
 */
 
-public class MultiplyStrings {
+public class MultiplyStrings {                                      // 一位一位的相乘
     public String multiply(String num1, String num2) {
         num1 = new StringBuilder(num1).reverse().toString();		// reverse number. For 123, it is [3,2,1]
         num2 = new StringBuilder(num2).reverse().toString();

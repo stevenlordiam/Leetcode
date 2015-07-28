@@ -9,7 +9,7 @@ If you have figured out the O(n) solution, try coding another solution of which 
 */
 
 public class MinimumSizeSubarraySum {
-    public int minSubArrayLen(int s, int[] nums) {
+    public int minSubArrayLen(int s, int[] nums) {          // keep a sliding window
         int front=0;
         int end=0;
         int sum=0;

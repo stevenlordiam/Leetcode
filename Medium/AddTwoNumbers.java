@@ -22,8 +22,7 @@ public class AddTwoNumbers {
         int digit = 0;
         ListNode head = null;
         ListNode pre = null;
-        while(l1!=null && l2!=null)			// adding the digit while l1 and l2 have same length
-        {
+        while(l1!=null && l2!=null) {		// adding the digit while l1 and l2 have same length
             digit = (l1.val+l2.val+carry)%10; 			// get the digit
             carry = (l1.val+l2.val+carry)/10;			// get the carry
             ListNode newNode = new ListNode(digit);
@@ -35,8 +34,7 @@ public class AddTwoNumbers {
             l1 = l1.next;
             l2 = l2.next;
         }
-        while(l1!=null) 					// l1 is longer than l2, after the while in line 25, need to adding the rest of l1: (2->2->2)+(1)=(3->2->2)
-        {
+        while(l1!=null) {					// l1 is longer than l2, after the while in line 25, need to adding the rest of l1: (2->2->2)+(1)=(3->2->2)
             digit = (l1.val+carry)%10;
             carry = (l1.val+carry)/10;
             ListNode newNode = new ListNode(digit);
@@ -47,8 +45,7 @@ public class AddTwoNumbers {
             pre = newNode;
             l1 = l1.next;            
         }
-        while(l2!=null)						// l2 is longer than l1, after the while in line 25, need to adding the rest of l2: (1)+(2->2->2)=(3->2->2)
-        {
+        while(l2!=null)	{					// l2 is longer than l1, after the while in line 25, need to adding the rest of l2: (1)+(2->2->2)=(3->2->2)
             digit = (l2.val+carry)%10;
             carry = (l2.val+carry)/10;
             ListNode newNode = new ListNode(digit);
@@ -59,8 +56,7 @@ public class AddTwoNumbers {
             pre = newNode;
             l2 = l2.next;            
         }        
-        if(carry>0) 						// additional carry at the end, (9->9)+(1)=(0->0->1)
-        {
+        if(carry>0) {						// additional carry at the end, (9->9)+(1)=(0->0->1)
             ListNode newNode = new ListNode(carry);
             pre.next = newNode;
         }

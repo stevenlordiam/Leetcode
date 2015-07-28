@@ -17,7 +17,7 @@ Given target = 3, return true.
 
 public class SearchA2DMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
-        int m=matrix.length; 		// row
+        int m=matrix.length; 		  // row
         int n=matrix[0].length;		// column
         int i=0,j=m*n-1;
         while(i<=j){

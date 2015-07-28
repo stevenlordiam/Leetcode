@@ -15,13 +15,13 @@ public class NextPermutation {
     public void nextPermutation(int[] num){
         if(num.length<2) return;
         int p=num.length-1;
-        while(p>0&&num[p]<=num[p-1]) p--;				// find the first p which is not in ascending order from the end
+        while(p>0&&num[p]<=num[p-1]) p--;				    // find the first p which is not in ascending order from the end
         if(p>0){
             int i=num.length-1;
-            while(num[i]<=num[p-1]) i--;				// find the first one greater than p
-            swap(num,p-1,i);							// remember it's p-1 here because it's the index
+            while(num[i]<=num[p-1]) i--;				    // find the first one greater than p
+            swap(num,p-1,i);							          // remember it's p-1 here because it's the index
         }
-        reverse(num,p,num.length-1);					// reverse elements after p
+        reverse(num,p,num.length-1);					      // reverse elements after p
     }
     private void swap(int[] num,int i,int j){ 			// use the private method to make the code cleaner
               int temp=num[i];

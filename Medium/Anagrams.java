@@ -11,8 +11,9 @@ public class Anagrams {
             char[] c=strs[i].toCharArray();			// first turn string to char array
             Arrays.sort(c);							// second sort the char array
             String s=new String(c);
-            if(map.keySet().contains(s)) map.get(s).add(strs[i]);	// third store them in a hashmap
-            else{
+            if(map.keySet().contains(s)) {          // third store them in a hashmap
+                map.get(s).add(strs[i]);	
+            } else{
                 List<String> list=new LinkedList<>();
                 list.add(strs[i]);
                 map.put(s,list);

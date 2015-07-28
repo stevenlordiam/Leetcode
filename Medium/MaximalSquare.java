@@ -21,9 +21,9 @@ public class MaximalSquare {
         int tmp1 = 0;
         int tmp2 = 0;
 
-        for(int i=0; i< matrix.length; i++) {
+        for(int i=0; i < matrix.length; i++) {
             tmp1 = 0;
-            for(int j=0; j< matrix[0].length; j++) {
+            for(int j=0; j < matrix[0].length; j++) {
                 tmp2 = dp[j+1];
                 if(matrix[i][j] == '1') {
                     dp[j+1] = Math.min(tmp1, Math.min(dp[j], dp[j+1])) + 1;

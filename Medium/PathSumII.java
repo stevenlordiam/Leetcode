@@ -56,7 +56,7 @@ public class PathSumII {
         findSum(result, solution, root.right, sum);
         // 注意，递归和回溯的特点就是 递归不可以改变path的值。也就是说，你返回时，这个path不能被改变，所以在这里要执行remove操作。
         // 在递归中添加path.add完后，必须要加入path.remove 操作，也就是说我们必须要在递归程序回到上一级之前，使path恢复它的原本的状态，这就是回溯咯。
-   		// 举一个简单的例子： 5 4 11 2 找完后，你希望退回到根节点5，再找5，8，4，5所以递归退回时，要把2，11，4依次删除掉。所以每次添加完并且递归后，再删除是必须的
+   		  // 举一个简单的例子： 5 4 11 2 找完后，你希望退回到根节点5，再找5，8，4，5所以递归退回时，要把2，11，4依次删除掉。所以每次添加完并且递归后，再删除是必须的
         solution.remove(solution.size()-1);					// REMEMBER to remove the last path (THIS IS IMPORTANT!!!)
     }
 }

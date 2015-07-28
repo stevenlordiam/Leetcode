@@ -23,8 +23,8 @@ public class RotateList {
 
         for (int i = 0; i < len - n; i++) { //len-n一画就出来了
             p = p.next;             // 之前p走到了list的底，然后形成loop，再走len-n步，再断开loop，就实现了rotate n steps
-        } 							// now p points to the prev of the new head
-        head = p.next;
+        } 							
+        head = p.next;              // now p points to the prev of the new head
         p.next = null;				// cut the loop
         return head;
     }

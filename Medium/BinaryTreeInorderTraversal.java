@@ -26,15 +26,11 @@ public class BinaryTreeInorderTraversal {   // 中序：左中右
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
         ArrayList<Integer> res = new ArrayList<Integer>();
         LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
-        while(root!=null || !stack.isEmpty())
-        {
-            if(root!=null)              // push root左支到头
-            {
+        while(root!=null || !stack.isEmpty()) {
+            if(root!=null) {            // push root左支到头
                 stack.push(root);
                 root = root.left;
-            }
-            else
-            {
+            } else {
                 root = stack.pop();
                 res.add(root.val);
                 root = root.right;

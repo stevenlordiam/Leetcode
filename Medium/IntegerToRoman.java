@@ -4,13 +4,13 @@ Given an integer, convert it to a roman numeral.
 Input is guaranteed to be within the range from 1 to 3999.
 */
 
-public class Solution {
+public class IntegerToRoman {
     public String intToRoman(int num) {
         String[] s={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
         int[]  A={1000,900,500,400,100,90,50,40,10,9,5,4,1};
-        StringBuilder str=new StringBuilder();
-        for(int i=0;i<A.length;i++){
-            while(num>=A[i]){
+        StringBuilder str = new StringBuilder();
+        for(int i=0; i<A.length; i++) {
+            while(num>=A[i]) {
                 num=num-A[i];
                 str.append(s[i]);
             }

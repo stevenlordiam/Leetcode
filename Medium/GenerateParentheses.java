@@ -16,7 +16,7 @@ public class GenerateParentheses {
         return rst;
     }
     
-	public void getPair( ArrayList<String> rst , String s, int left, int right) {
+	public void getPair(ArrayList<String> rst , String s, int left, int right) {
 		if(left > right || left < 0 || right < 0) {
 			return; 	
 		}

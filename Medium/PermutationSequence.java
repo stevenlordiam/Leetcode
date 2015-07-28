@@ -20,8 +20,8 @@ public class PermutationSequence {
         StringBuilder sb = new StringBuilder();
         boolean[] used = new boolean[n];
         k = k - 1;
-        int factor = 1;
-        for (int i = 1; i < n; i++) {
+        int factor = 1; 
+        for (int i = 1; i < n; i++) {   // (n-1)阶乘
             factor *= i;
         }
         for (int i = 0; i < n; i++) {

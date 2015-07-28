@@ -19,9 +19,9 @@ Given target = 5, return true.
 Given target = 20, return false
 */
 
-public class SearchA2DMatrixII {     // 每次去掉一行或者一列，O(m+n)
+public class SearchA2DMatrixII {    // 每次去掉一行或者一列，O(m+n)
     public boolean searchMatrix(int[][] matrix, int target) {
-        int m = matrix.length;  // row
+        int m = matrix.length;      // row
         int n = matrix[0].length;   // column
         if  (m==0 || n==0) return false;
         int i = 0, j = n-1;

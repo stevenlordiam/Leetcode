@@ -11,12 +11,12 @@ Return true because "leetcode" can be segmented as "leet code".
 public class WordBreak {
     public boolean wordBreak(String s, Set<String> dict) {
        int n=s.length();
-       boolean[] res=new boolean[n+1];
-       res[0]=true;
-       for(int i=0;i<n;i++){
-           for(int j=0;j<=i;j++){
-               if(res[j]&&dict.contains(s.substring(j,i+1))){
-                   res[i+1]=true;
+       boolean[] res = new boolean[n+1];
+       res[0] = true;
+       for(int i=0; i<n; i++) {
+           for(int j=0; j<=i; j++) {
+               if(res[j]&&dict.contains(s.substring(j,i+1))) {
+                   res[i+1] = true;
                }
            }
        }

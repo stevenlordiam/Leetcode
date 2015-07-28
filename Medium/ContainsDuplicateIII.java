@@ -9,16 +9,16 @@ public class ContainsDuplicateIII {
             return false;
         }
         final TreeSet<Integer> values = new TreeSet<>();
-        for (int ind = 0; ind < nums.length; ind++) {
-            Integer floor = values.floor(nums[ind] + t);
-            Integer ceil = values.ceiling(nums[ind] - t);
-            if ((floor != null && floor >= nums[ind])
-                    || (ceil != null && ceil <= nums[ind])) {
+        for (int index = 0; index < nums.length; index++) {
+            Integer floor = values.floor(nums[index] + t);      // 小于等于nums[index] + t的最大值
+            Integer ceil = values.ceiling(nums[index] - t);     // 大于nums[index] - t的最小值
+            if ((floor != null && floor >= nums[index])
+                    || (ceil != null && ceil <= nums[index])) {
                 return true;
             }
-            values.add(nums[ind]);
-            if (ind >= k) {
-                values.remove(nums[ind - k]);
+            values.add(nums[index]);
+            if (index >= k) {
+                values.remove(nums[index - k]);
             }
         }
         return false;

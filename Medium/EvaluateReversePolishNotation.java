@@ -12,8 +12,8 @@ public class EvaluateReversePolishNotation {
     public int evalRPN(String[] tokens) {
         Stack<Integer> s = new Stack<Integer>();
         String operators = "+-*/";
-        for(String token : tokens){
-            if(!operators.contains(token)){
+        for(String token : tokens) {         
+            if(!operators.contains(token)) {        // (boolean) string.contains(substring)
                 s.push(Integer.valueOf(token));     // string to Integer
                 continue;
             }       

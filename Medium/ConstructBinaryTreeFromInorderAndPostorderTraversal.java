@@ -32,13 +32,13 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         }
 
         TreeNode root = new TreeNode(postorder[postend]);
-        int position = findPosition(inorder, instart, inend, postorder[postend]);
+        int position = findPosition(inorder, instart, inend, postorder[postend]);   // root position in inorder traversal array
 
         root.left = myBuildTree(inorder, instart, position - 1,
                 postorder, poststart, poststart + position - instart - 1);
         root.right = myBuildTree(inorder, position + 1, inend,
-                postorder, poststart + position - instart, postend - 1);
-        return root;
+                postorder, poststart + position - instart, postend - 1);    // poststart + position - instart 是后序遍历左子树长度
+        return root;                                                        // poststart = 0, position - instart 是后序遍历左子树长度
     }
 
     public TreeNode buildTree(int[] inorder, int[] postorder) {
