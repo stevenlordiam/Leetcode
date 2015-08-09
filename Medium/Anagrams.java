@@ -6,11 +6,11 @@ Note: All inputs will be in lower-case.
 
 public class Anagrams {
     public List<String> anagrams(String[] strs) {
-        HashMap<String,List<String>> map=new HashMap<>();
-        for(int i=0;i<strs.length;i++){
+        HashMap<String,List<String>> map = new HashMap<String,List<String>>();
+        for(int i=0; i<strs.length; i++) {
             char[] c=strs[i].toCharArray();			// first turn string to char array
             Arrays.sort(c);							// second sort the char array
-            String s=new String(c);
+            String s = new String(c);
             if(map.keySet().contains(s)) {          // third store them in a hashmap
                 map.get(s).add(strs[i]);	
             } else{
