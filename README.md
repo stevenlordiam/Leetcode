@@ -1,7 +1,7 @@
 ###LeetcodeOJ
 ==========
 
-My solutions to Leetcode Online Judge
+My solutions to Leetcode Online Judge in Java
 
 Some useful website:
 
