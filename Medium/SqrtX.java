@@ -10,8 +10,10 @@ public class SqrtX {
         if(x==0) return 0;
         if(x==1) return 1;
         int left=1,right=x-1; 		
-        while(left+1<right){
+        while(left+1<right){ // 注意是left+1 !!!
             int mid=left+(right-left)/2;
+            // 如果是mid*mid可以在之前定义一个midSquare这样可以不用重复计算mid*mid的值
+            // 不能是mid*mid，应该是mid==x/mid，否则会overflow
             if(mid==(x/mid)) return mid;
             if(mid>(x/mid)) right=mid;
             else left=mid;
