@@ -27,4 +27,6 @@ public class MeetingRooms {
 /*
 Reference:
 http://sbzhouhao.net/LeetCode/LeetCode-Meeting-Rooms.html
+https://leetcode.com/discuss/50832/accepted-java-solution
+https://leetcode.com/discuss/50912/ac-clean-java-solution
 */

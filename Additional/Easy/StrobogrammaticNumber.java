@@ -39,4 +39,8 @@ public class StrobogrammaticNumber {
 /*
 Reference:
 http://sbzhouhao.net/LeetCode/LeetCode-Strobogrammatic-Number.html
+https://leetcode.com/discuss/52273/accepted-java-solution
+https://leetcode.com/discuss/50369/ac-clean-java-recursion-solution
+https://leetcode.com/discuss/50359/my-concise-java-solution
+https://leetcode.com/discuss/50594/4-lines-in-java
 */
