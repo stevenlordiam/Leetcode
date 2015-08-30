@@ -17,4 +17,5 @@ Reference:
 https://leetcode.com/discuss/21751/simple-query-which-handles-the-null-situation
 https://leetcode.com/discuss/23759/my-tidy-soution
 https://leetcode.com/discuss/21202/my-answer-about-this-question-using-ifnull-and-distinct
+https://github.com/kamyu104/LeetCode/blob/master/MySQL/second-highest-salary.sql
 */

@@ -36,5 +36,6 @@ You may use either a LEFT JOIN (Person LEFT JOIN Address) or a RIGHT JOIN (Addre
 
 Reference:
 https://leetcode.com/problems/combine-two-tables/solution/
+https://github.com/kamyu104/LeetCode/blob/master/MySQL/combine-two-tables.sql
 http://stackoverflow.com/questions/5706437/whats-the-difference-between-inner-join-left-join-right-join-and-full-join
 */
