@@ -23,7 +23,7 @@ public class TwoSum {
 	        int[] index = new int[2];
 	        
 	        for(int i=0; i<numbers.length ; i++){
-	            if ( hashmap.containsKey( target - numbers[i] )){
+	            if ( hashmap.containsKey( target - numbers[i] )){ 	// 注意是containsKey 不是contains
 	                int index1 = i+1;
 	                int index2 = hashmap.get(target - numbers[i]);
 	                if (index1 == index2){
@@ -31,7 +31,7 @@ public class TwoSum {
 	                }
 	                index[0] = index1;
 	                index[1] = index2;
-	                return index;
+	                return index;			// 注意在此return
 	            }
 	        }
 	        return index;

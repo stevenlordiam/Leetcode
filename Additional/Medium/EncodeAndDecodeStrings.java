@@ -28,6 +28,7 @@ Note:
 The string may contain any possible characters out of 256 valid ascii characters. Your algorithm should be generalized enough to work on any possible characters.
 Do not use class member/global/static variables to store states. Your encode and decode algorithms should be stateless.
 Do not rely on any library method such as eval or serialize methods. You should implement your own encode/decode algorithm.
+
 Well, let's use an example strs = ["#$%", "", "12"] to illustrate the encoding and decoding algorithms. The idea is to use some character as sentinel. But since the input strs may contain any character, including the sentinel, we still need to use other information to avoid ambiguation. Specifically, we use the length of the string. The above string will be encoded as
 
 3##$%0#2#12

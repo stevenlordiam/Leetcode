@@ -12,7 +12,7 @@ public class RemoveElement {
         int len = 0;
         for(int i=0; i<A.length; i++){
             if(A[i]!=elem){     // when not equal, set the original number to the new array, otherwise jump over the number equivalent to elem
-                A[len]=A[i];
+                A[len]=A[i];    // 不用A[i] == elem 判断而是使用 '!=' 判断
                 len++;
             }
         }
