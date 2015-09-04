@@ -24,4 +24,5 @@ Reference:
 https://leetcode.com/discuss/55958/my-easy-solution
 https://leetcode.com/discuss/55950/1-line-ruby-5-lines-c-6-lines-java
 https://leetcode.com/discuss/55933/java-solution-with-sorting-n-lgn
+http://www.cnblogs.com/jcliBlogger/p/4782463.html
 */
