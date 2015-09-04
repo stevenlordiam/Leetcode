@@ -15,17 +15,16 @@ For example:
 public class ExcelSheetColumnTitle {
     public static String convertToTitle(int n) {
         StringBuilder s = new StringBuilder();
-        if(n<=0){
+        if(n <= 0) {
             return "";
         }
-        while(n>0){
-            int tmp=n%26;                   // get the remainder tmp;
-            n=n/26;                         // if n=27, after this statement n=1 (27/2 = 1)
-            if(tmp==0){                     // two case, 'Z' and others
+        while(n > 0) {
+            int tmp = n % 26;                   // get the remainder tmp;
+            n /= 26;                         // if n=27, after this statement n=1 (27/2 = 1)
+            if(tmp == 0) {                     // two case, 'Z' and others
                 s.insert(0,'Z');
                 n--;
-            } 
-            else{
+            } else {
                s.insert(0,(char)(tmp-1+'A')); 
             } 
         }

@@ -14,7 +14,7 @@ public class ClimbStairs {
         if(n==2){
             return stepTwo;
         }
-        for(int i=3;i<=n;i++){
+        for(int i=3;i<=n;i++){      // 注意此处是 i <= n
             int stepThree = stepOne+stepTwo;
             stepOne = stepTwo;              // if n-1 step took i ways, then n if stepOne, i+1 way([1]); if stepTwo, i+2 way([1,1] or [2])
             stepTwo = stepThree;

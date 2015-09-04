@@ -29,6 +29,21 @@ public class AddDigits {
 }
 
 /*
+Without recursion:
+
+public class Solution {
+    public int addDigits(int num) {
+        return (num - 1) % 9 + 1;
+    }
+
+    // another solution
+    public int addDigit(int num) {
+        if (num == 0) return 0;
+        else if (num % 9 == 0) return 9;
+        else return num % 9;
+    }
+}
+
 Reference:
 https://leetcode.com/discuss/52140/share-my-simple-to-understand-no-tricky-java-solution
 https://leetcode.com/discuss/52092/256ms-java-one-line-solution

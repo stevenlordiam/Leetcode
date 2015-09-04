@@ -21,7 +21,7 @@ You should return [1, 3, 4].
  * }
  */
 public class BinaryTreeRightSideView { // Divide and conquer: solving the right tree side view and left tree side view ,and then merge the results
-    public List<Integer> rightSideView(TreeNode root) {
+    public List<Integer> rightSideView(TreeNode root) {         
         List<Integer> result = new ArrayList<Integer>();
         if(root==null){
             return result;
@@ -29,7 +29,7 @@ public class BinaryTreeRightSideView { // Divide and conquer: solving the right 
         result.add(root.val);
         List<Integer> rightTree = rightSideView(root.right);
         List<Integer> leftTree = rightSideView(root.left);
-        for(int i=0; i<Math.max(leftTree.size(), rightTree.size()); i++){
+        for(int i=0; i<Math.max(leftTree.size(), rightTree.size()); i++){       // recursion
             if(i >= rightTree.size()) {
             	result.add(leftTree.get(i));
             } else {

@@ -19,7 +19,7 @@ public class PalindromeLinkedList  {
 		if(head==null || head.next==null) return true;
 		ListNode slow = head;
 		ListNode fast = head;
-		while(fast.next!=null && fast.next.next!=null){
+		while(fast.next!=null && fast.next.next!=null){ 	// 注意在此处也要判断fast.next.next!=null
 			fast = fast.next.next;
 			slow = slow.next;
 		}

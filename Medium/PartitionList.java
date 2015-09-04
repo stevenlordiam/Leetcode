@@ -60,6 +60,31 @@ Similar to CC150 (2-4) partition list (LinkedLists_4.java)
 这里有一个小细节，就是如果不需要移动（也就是已经是接在小于x的最后元素的后面了），那么只需要继续前进即可。
 算法时间复杂度是O(n)，空间只需要几个辅助变量，是O(1)
 
+public ListNode partition(ListNode head, int x) {
+    if(head == null) return null;   
+    ListNode dummy = new ListNode(0);  
+    dummy.next = head;
+    ListNode slow = dummy;
+    ListNode fast = dummy;
+    while(fast.next != null) {
+        if(fast.next.val < x) {
+            if(slow == fast) {
+                fast = fast.next;
+            } else {     // move
+                ListNode tmp = fast.next.next;
+                fast.next.next = slow.next;
+                slow.next = fast.next;
+                fast.next = tmp;      
+            }
+            slow = slow.next;
+        } else {
+            fast = fast.next;
+        }
+    
+    }
+    return dummy.next;      
+}
+
 Reference:
 https://leetcodenotes.wordpress.com/2013/08/03/leetcode-partition-list-%E5%9B%B4%E7%BB%95x%E6%8A%8Alinked-list%E5%88%86%E6%88%90x%E7%9A%84%E9%A1%BA%E5%BA%8F/
 http://www.ninechapter.com/solutions/partition-list/

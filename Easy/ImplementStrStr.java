@@ -8,10 +8,10 @@ public class ImplementStrStr {
     public int strStr(String haystack, String needle) {
         if(haystack.equals(needle)||needle.length()==0) return 0;
         if(needle.length()>haystack.length()) return -1;
-        for(int i=0;i<haystack.length()-needle.length()+1;i++){
+        for(int i=0;i<haystack.length()-needle.length()+1;i++){     // 注意此处有+1
             for(int j=0;j<needle.length();j++){
                 if(haystack.charAt(i+j)!=needle.charAt(j)) break; 		// if not equal, jump out of loop, otherwise j increases until the end(needle.length()-1), in this case, it's matched
-                if(j==needle.length()-1) return i;			// i is the index
+                if(j==needle.length()) return i;			// i is the index
             }
         }
         return -1;

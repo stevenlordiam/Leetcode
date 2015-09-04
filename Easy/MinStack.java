@@ -25,7 +25,7 @@ class MinStack {
       return stack.peek();
     }
     public int getMin() {
-      return minStack.peek();
+      return minStack.peek();   // 注意此处是peek()不是pop()
     }
 }
 
