@@ -18,7 +18,7 @@ public class ReverseInteger {
     public int reverse(int x) {
         int result = 0;
         while(x!=0){
-            if (Math.abs(result) > 214748364) {         // handle overflow/underflow, should first divide the Integer.MAX_VALUE by 10, otherwise cannot compare
+            if (Math.abs(result) > Integer.MAX_VALUE / 10) {         // handle overflow/underflow, should first divide the Integer.MAX_VALUE by 10, otherwise cannot compare
                 return 0;
             }
             result = result*10+x%10;

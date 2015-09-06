@@ -21,7 +21,7 @@ public class MinimumDepthOfBinaryTree {             // always try recursion in b
         return getMin(root);
     }
 
-    public int getMin(TreeNode root){
+    public int getMin(TreeNode root){               // 需要recursion的时候写一个helper方法(getMin)
         if (root == null) {                         // here RETURN Integer.MAX_VALUE not zero, see explanation as follow
             return Integer.MAX_VALUE;               // THIS IS IMPORTANT!!!
         }

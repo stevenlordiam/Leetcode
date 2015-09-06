@@ -22,7 +22,7 @@ public class RemoveDuplicatesFromSortedList {
         if(head == null){
             return null;
         }
-        ListNode node = head;
+        ListNode node = head;   // 用node来遍历list而不是用head因为head要保存LinkedList开始的位置
         while(node.next != null){
             if(node.val == node.next.val){          // sorted linked list
                 node.next = node.next.next;
