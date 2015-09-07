@@ -12,21 +12,21 @@ Depending on your language, queue may not be supported natively. You may simulat
 You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).
 */
 
-class MyStack {
+class ImplementStackUsingQueues {
     
     private Queue<Integer> queue = new LinkedList<>();
     
     // Push element x onto stack.
     public void push(int x) { 		// make the queue reverse order to implement a stack
         queue.add(x);
-        for (int i=1; i<queue.size(); i++) {
-            queue.add(queue.remove());
+        for (int i=0; i<queue.size()-1; i++) {  // 除了第一个element之外，每加一个element都将queue poll然后再add 相当于把queue reverse order
+            queue.add(queue.poll());
         }
     }
 
     // Removes the element on top of the stack.
     public void pop() {
-        queue.remove(); // remove and return the head of the queue
+        queue.poll(); // remove and return the head of the queue
     }
 
     // Get the top element.
@@ -44,4 +44,5 @@ class MyStack {
 Reference:
 https://leetcode.com/discuss/39799/two-possible-solutions
 https://leetcode.com/discuss/39814/concise-1-queue-java-c-python
+https://leetcode.com/discuss/40202/only-push-others-using-queue-combination-shared-solutions
 */

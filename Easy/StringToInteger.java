@@ -16,22 +16,22 @@ If no valid conversion could be performed, a zero value is returned. If the corr
 */
 public class StringToInteger {
     public int atoi(String str) {
-        str=str.trim();             // omit the leading and trailing whitespaces
-        if(str.length()==0) return 0;
-        int sign=1,start=0;         // start index
-        long res=0;                 // store the result in long type to prevent overflow
-        if(str.charAt(0)=='-'){
-            sign=-1;
-            start=1;
+        str = str.trim();             // omit the leading and trailing whitespaces
+        if(str.length() == 0) return 0;
+        int sign = 1, start = 0;         // start index
+        long res = 0;                 // store the result in long type to prevent overflow
+        if(str.charAt(0) == '-') {
+            sign = -1;
+            start = 1;
         }
-        if(str.charAt(0)=='+'){
-            start=1;
+        if(str.charAt(0) == '+') {
+            start = 1;
         }
-        for(int i=start;i<str.length();i++){
-            if(str.charAt(i)>='0'&&str.charAt(i)<='9'){
-                res=10*res+sign*(int)(str.charAt(i)-'0');           // read the digit
-                if(res>Integer.MAX_VALUE) return Integer.MAX_VALUE;
-                if(res<Integer.MIN_VALUE) return Integer.MIN_VALUE;
+        for(int i = start; i < str.length(); i++) {
+            if(str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+                res = 10*res + sign*(int)(str.charAt(i) - '0');           // read the digit
+                if(res > Integer.MAX_VALUE) return Integer.MAX_VALUE;
+                if(res < Integer.MIN_VALUE) return Integer.MIN_VALUE;
             }
             else break;
         }

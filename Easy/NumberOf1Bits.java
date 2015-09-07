@@ -8,7 +8,7 @@ public class NumberOf1Bits {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
         int res = 0;
-        for (int i = 0; i < 32; i++) { // 32次右移
+        for(int i = 0; i < 32; i++) { // 32次右移
             res += (n & 1); 	// get bit
             n = n >> 1;
         }

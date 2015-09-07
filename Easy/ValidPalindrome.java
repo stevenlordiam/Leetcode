@@ -13,7 +13,7 @@ For the purpose of this problem, we define empty string as valid palindrome.
 
 public class ValidPalindrome {
     public static boolean isPalindrome(String s) {
-        if(s==null || s.length()==0){
+        if(s == null || s.length() == 0){
             return true;
         }
         s = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();         // regular expression

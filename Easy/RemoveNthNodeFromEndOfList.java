@@ -24,18 +24,18 @@ Try to do this in one pass.
  * }
  */
 public class RemoveNthNodeFromEndOfList {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-       ListNode dummy=new ListNode(0);
-       dummy.next=head;
-       ListNode fast=head,slow=dummy;   // fast is used to get the length, slow is used to get the nth node
-       int i=0;
-       while(fast!=null){               // end of the linked list is null
+    public ListNode removeNthFromEnd(ListNode head, int n) {  // 链表一般都用while(x!=null)或者while(x.next!=null)
+       ListNode dummy = new ListNode(0);
+       dummy.next = head;
+       ListNode fast = head, slow = dummy;    // fast is used to get the length, slow is used to get the nth node
+       int i = 0;
+       while(fast != null) {                  // end of the linked list is null 
            i++;
-           if(i>n) slow=slow.next;      // n steps after fast node starts, slow node starts to move ahead
-           fast=fast.next;              // move the fast node ahead
+           if(i > n) slow = slow.next;        // n steps after fast node starts, slow node starts to move ahead
+           fast = fast.next;                  // move the fast node ahead
        }
-       slow.next=slow.next.next;	      // when fast==null, reach the end of the linked list, delete the nth node 
-       return dummy.next;	              // return the head of the revised linked list
+       slow.next = slow.next.next;	          // when fast==null, reach the end of the linked list, delete the nth node 
+       return dummy.next;	                    // return the head of the revised linked list
     }
 }
 

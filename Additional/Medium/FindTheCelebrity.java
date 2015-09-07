@@ -26,6 +26,27 @@ public class FindTheCelebrity extends Relation {
 }
 
 /*
+方法一:
+列一个N by N的表格, 然后用1表示认识, 0表示不认识, 如果有celebrity, 那么那一行应该是全1的, 然后剩下的就是一行一行的搜索, 所以时间复杂度是O(n^2).
+
+方法二:
+O(n)时间,具体解法是:把这些人编号1,2,3,4….n。1问2认不认识1, 2的回答只有两种,Yes or No,如果是No,1就不可能是celebrity,保留2;
+如果是Yes,2就不可能是celebrity,保留1;然后如此类推,这样每问一次可以消去1个人,最后n-1次之后只有一个编号为i的人有可能是celebrity
+(注意,是可能而已,我们还不能确定),我们只要再扫一遍所有的人,如果答案都是别人认识i,i不认识别人,那么我们找到了celebrity,如果有例外,那么就不存在celebrity.
+In total, time complexity is O(n)
+
+方法三:
+可以分析几种情况
+- 如果A认识B，那么A不可能是celebrity。去掉A，B则有可能是
+- 如果A不认识B，那么B不可能是celebrity。去掉B，A则有可能是
+- 重复以上两个步骤直到只剩下一个候选人
+- 再次确认是否这最后一个人是否为celebrity
+- 这里用stack来做。
+
+把所有的celebrity压栈，弹出最上面的两个celebrity，根据HaveAcquaintance(A, B)的结果来去掉一个一定不是celebrity的人
+将2中剩下的那一位压栈，重复以上两个步骤，直到stack中只剩一个人，确认这个人不认识其他任何人
+以上算法需要调用HaveAcquaintance(A,B) 3(N-1)次
+
 Reference:
 http://www.cnblogs.com/easonliu/p/4785253.html
 http://www.fgdsb.com/2015/01/03/the-celebrity-problem/

@@ -11,15 +11,15 @@ You could also try reversing an integer. However, if you have solved the problem
 There is a more generic way of solving this problem.
 */
 public class PalindromeNumber  {
-    public boolean isPalindrome(int x) {
-      if(x<0) return false;     // discuss with interviewer if negative integers are palindromes
-      int z=x;
-      long y=0;
-      while(z!=0){		// reverse an integer
-          y=10*y+z%10;
-          z=z/10;
+    public boolean isPalindrome(int x) {    // reverse integer then compare
+      if(x < 0) return false;               // discuss with interviewer if negative integers are palindromes
+      int z = x;
+      long y = 0;
+      while(z != 0) {		// reverse an integer
+          y = 10*y + z%10;
+          z = z / 10;
       }
-      return x==y;
+      return x == y;
     }
 }
 
