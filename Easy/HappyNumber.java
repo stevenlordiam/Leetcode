@@ -12,31 +12,51 @@ Example: 19 is a happy number
 */
 
 public class HappyNumber {
-    public boolean isHappy(int n) {
-        int slow = digitSquareSum(n);
-        int fast = digitSquareSum(digitSquareSum(n));
-        while(slow != 1 && slow != fast) {
-            slow = digitSquareSum(slow);
-            fast = digitSquareSum(fast);
-            fast = digitSquareSum(fast);
-        }
-        if (slow == 1) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    
-    public int digitSquareSum(int n) {
-        int sum = 0, tmp;
-        while (n > 0) {
-            tmp = n % 10;
-            sum += tmp * tmp;
+    private int getNextHappy(int n) {
+        int sum = 0;
+        while (n != 0) {
+            sum += (n % 10) * (n % 10);
             n /= 10;
         }
         return sum;
     }
+    
+    public boolean isHappy(int n) {
+        HashSet<Integer> hash = new HashSet<Integer>();
+        while (n != 1) {
+            if (hash.contains(n)) {
+                return false;
+            }
+            hash.add(n);
+            n = getNextHappy(n);
+        }
+        return true;
+    }
 
+    // public boolean isHappy(int n) {
+    //     int slow = digitSquareSum(n);
+    //     int fast = digitSquareSum(digitSquareSum(n));
+    //     while(slow != 1 && slow != fast) {
+    //         slow = digitSquareSum(slow);
+    //         fast = digitSquareSum(fast);
+    //         fast = digitSquareSum(fast);
+    //     }
+    //     if (slow == 1) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+    
+    // public int digitSquareSum(int n) {
+    //     int sum = 0, tmp;
+    //     while (n > 0) {
+    //         tmp = n % 10;
+    //         sum += tmp * tmp;
+    //         n /= 10;
+    //     }
+    //     return sum;
+    // }
 }
 
 /*
@@ -58,31 +78,8 @@ public boolean isHappy(int n) {
     return n == 1;
 }
 
-// nine chapter solution
-public class Solution {
-    private int getNextHappy(int n) {
-        int sum = 0;
-        while (n != 0) {
-            sum += (n % 10) * (n % 10);
-            n /= 10;
-        }
-        return sum;
-    }
-    
-    public boolean isHappy(int n) {
-        HashSet<Integer> hash = new HashSet<Integer>();
-        while (n != 1) {
-            if (hash.contains(n)) {
-                return false;
-            }
-            hash.add(n);
-            n = getNextHappy(n);
-        }
-        return true;
-    }
-}
-
 Reference:
+http://www.jiuzhang.com/solutions/happy-number/
 https://leetcode.com/discuss/33055/my-solution-in-c-o-1-space-and-no-magic-math-property-involved
 https://leetcode.com/discuss/32842/use-the-same-way-as-checking-cycles-in-a-linked-list
 https://leetcode.com/discuss/32924/short-java-code
