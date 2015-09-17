@@ -5,7 +5,7 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 */
 
 public class ClimbStairs {
-    public int climbStairs(int n) { // Recursion: O(2^N), DP: O(N)
+    public int climbStairs(int n) {     // DP: O(N)
         int stepOne = 1;
         int stepTwo = 2;
         if(n<=1){
@@ -26,12 +26,23 @@ public class ClimbStairs {
 /*
 Similar to CC150 (9-1) Climbing Stairs (RecursionAndDynamicProgramming_1.java)
 
+// Recursion: O(2^N), DP: O(N)
+
+// Recursion:
+public int climbStairs(int n) {
+    if(n<=0) {
+        return 0;
+    } else {
+        return climbStairs(n-1) + climbStairs(n-2);
+    }
+}
+
 Notice:
-This is Fibonacci number, time complexity is O(n)
+This is Fibonacci number, DP time complexity is O(n)
 
 Similiar solution:
 https://oj.leetcode.com/discuss/24794/short-java-solution
 
-A better solution is O(logn), see at: 
+A better solution (use Fibonacci Formulation) is O(logn), see at: 
 http://blog.csdn.net/linhuanmars/article/details/23976963
 */

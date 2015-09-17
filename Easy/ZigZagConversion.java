@@ -58,6 +58,7 @@ n=4时的走法是：
 其他行除了上面那个填字规则，就是还要处理斜着那条线的字，可以发现那条线的字的位置永远是当前列j+(2n-2)-2i(i是行的index） 
 
 Reference:
+http://www.jiuzhang.com/solutions/zigzag-conversion/
 https://leetcodenotes.wordpress.com/2013/09/30/leetcode-zigzag-conversion-%E6%8A%8Azigzag%E7%9A%84string%E7%94%A8%E6%A8%AA%E7%9D%80%E6%89%AB%E7%9A%84%E6%96%B9%E5%BC%8F%E8%BE%93%E5%87%BA/
 http://blog.csdn.net/linhuanmars/article/details/21145039
 http://www.cnblogs.com/springfor/p/3889414.html

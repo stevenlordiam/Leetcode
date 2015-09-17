@@ -14,7 +14,7 @@ Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node wi
  */
 
 public class Solution {
-	public void deleteNode(ListNode node){
+	public void deleteNode(ListNode node){	// 因为没有prev的reference，所以把next的值给current node然后删掉next就相当于删掉了current node
 		if(node==null||node.next==null){
 			return;
 		}
