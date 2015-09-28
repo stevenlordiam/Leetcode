@@ -13,7 +13,10 @@ You should return the following matrix:
 */
 
 public class SpiralMatrixII {
-    public int[][] generateMatrix(int n) {
+    public int[][] generateMatrix(int n) {              // clockwise
+        // [1, 2, 3]
+        // [8, 9, 4]
+        // [7, 6, 5]
         int[][] res = new int[n][n];
         int k = 1;
         int top = 0, bottom = n - 1, left = 0, right = n - 1;
@@ -39,6 +42,51 @@ public class SpiralMatrixII {
             res[n / 2][n / 2] = k;
         return res;
 
+    }
+
+    public static int[][] antiClockWise(int n) {        // anti-clockwise
+        // [1, 8, 7]
+        // [2, 9, 6]
+        // [3, 4, 5]
+        int[][] res = new int[n][n];
+        int k = 1;
+        int top = 0, bottom = n - 1, left = 0, right = n - 1;
+        while (left < right && top < bottom) {          // 夹逼方法
+            for (int i = top; i < bottom; i++) {        // top to bottom
+                res[i][left] = k++;
+            }
+            
+            for (int j = left; j < right; j++) {        // left to right
+                res[bottom][j] = k++;
+            }
+            
+            for (int i = bottom; i > top; i--) {        // bottom to top
+                res[i][right] = k++;
+            }
+                
+            for (int j = right; j > left; j--) {        // right to left
+                res[top][j] = k++;
+            }
+            
+            left++;
+            right--;
+            top++;
+            bottom--;
+        }
+        if (n % 2 != 0)                                 // set the middle one if it's odd number, in this case left==right / top==bottom, need to set the one in the middle manually
+            res[n / 2][n / 2] = k;
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int n = 3;
+        for(int i = 0; i < n; i++) {
+            System.out.println(Arrays.toString(generateMatrix(n)[i]));
+        }
+        System.out.println("------------------");
+        for(int i = 0; i < n; i++) {
+            System.out.println(Arrays.toString(antiClockWise(n)[i]));
+        }
     }
 }
 

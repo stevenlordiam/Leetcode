@@ -12,6 +12,7 @@ import java.util.*;
 
 public class ExpressionAddOperators {
 	
+	// solution 1
 	public static List<String> addOperators(String num, int target) { 	// backtracking
 		List<String> rst = new ArrayList<String>();
 		if(num == null || num.length() == 0) return rst;
@@ -55,11 +56,41 @@ public class ExpressionAddOperators {
 			}
 		}
 	}
+
+	// solution 2
+    public static List<String> addOperators2(String num, int target) {
+        List<String> res = new ArrayList<String>();
+        if(num == null || num.length() == 0)
+            return res;
+        helper(num,target,res,"",0,0,0);
+        return res;
+    }
+    
+    public static void helper(String num, int target, List<String> res, String path,int index,long multiprev, long sum){
+        if(index == num.length() && sum == target){
+            res.add(path);
+            return;
+        }
+        
+        for(int i = index; i<num.length(); i++){
+            if(i!=index && num.charAt(index) == '0')
+                break;
+            
+            long value = Long.parseLong(num.substring(index,i+1));
+            if(index == 0)
+                helper(num, target, res, path+value,i+1,value,value);
+            else{
+                helper(num,target, res, path+"+"+value,i+1,value,sum+value);
+                helper(num,target, res, path+"-"+value,i+1,-value,sum-value);
+                helper(num,target, res, path+"*"+value,i+1,multiprev*value,sum-multiprev+multiprev*value);
+            }
+        }
+    }
 	
 	public static void main(String[] args) {
-		System.out.println(addOperators("123", 6));
-		System.out.println(addOperators("232", 8));
-		System.out.println(addOperators("1231231234",11353));
+		System.out.println(addOperators2("123", 6));
+		System.out.println(addOperators2("232", 8));
+		System.out.println(addOperators2("1231231234",11353));
 	}
 }
 
