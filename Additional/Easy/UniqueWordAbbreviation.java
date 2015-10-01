@@ -26,7 +26,7 @@ public class UniqueWordAbbreviation {
 		for (String word : dictionary) {
 			if (word == null || word.length() <= 2) continue;
 			String abbrWord = getAbbr(word);
-			if (!map.containsKey(abbrWord)) {
+			if (!map.containsValue(abbrWord)) {
 				map.put(word, abbrWord);
 			} 
 		}
