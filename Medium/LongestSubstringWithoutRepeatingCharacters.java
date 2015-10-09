@@ -27,6 +27,25 @@ public class LongestSubstringWithoutRepeatingCharacters {
         }
         return max;
     }
+
+    // public static String longestSubstring(String input) {    // return the substring instead of the length
+    //     HashSet<Character> set = new HashSet<Character>();
+    //     String longestOverAll = "";
+    //     String longestTillNow = "";
+    //     for (int i = 0; i < input.length(); i++) {
+    //         char c = input.charAt(i);
+    //         if (set.contains(c)) {
+    //             longestTillNow = "";
+    //             set.clear();
+    //         }
+    //         longestTillNow += c;
+    //         set.add(c);
+    //         if (longestTillNow.length() > longestOverAll.length()) {
+    //             longestOverAll = longestTillNow;
+    //         }
+    //     }
+    //     return longestOverAll;
+    // }
 }
 
 /*
@@ -45,4 +64,5 @@ https://leetcodenotes.wordpress.com/2013/11/02/leetcode-longest-substring-withou
 http://www.ninechapter.com/solutions/longest-substring-without-repeating-characters/
 http://blog.csdn.net/linhuanmars/article/details/19949159
 https://yusun2015.wordpress.com/2015/01/14/longest-substring-without-repeating-characters/
+http://stackoverflow.com/questions/9734474/find-longest-substring-without-repeating-characters
 */

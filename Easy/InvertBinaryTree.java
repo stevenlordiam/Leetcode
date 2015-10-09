@@ -37,29 +37,7 @@ public class InvertBinaryTree {
         return root;
     }
 
-    // version 2 - iteration
-    public TreeNode invertTree(TreeNode root) {
-        if (root == null) return null;
-        final Deque<TreeNode> stack = new LinkedList<>();
-        stack.push(root);
-
-        while(!stack.isEmpty()) {
-            final TreeNode node = stack.pop();
-            final TreeNode left = node.left;
-            node.left = node.right;
-            node.right = left;
-
-            if(node.left != null) {
-                stack.push(node.left);
-            }
-            if(node.right != null) {
-                stack.push(node.right);
-            }
-        }
-        return root;
-    }
-
-    // version 3 - BFS / level order traversal
+    // version 2 - iteration / BFS / level order traversal
     public TreeNode invertTree(TreeNode root) {
         if (root == null) return null;
 
