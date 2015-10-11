@@ -53,6 +53,7 @@ public class WordPattern {
 }
 
 /*
+Reference:
 https://leetcode.com/discuss/62374/9-lines-simple-java
 https://leetcode.com/discuss/62363/simple-and-fast-java-solution
 */
