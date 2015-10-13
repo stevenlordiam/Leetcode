@@ -1,6 +1,11 @@
 ###LeetcodeOJ
 ==========
 
+###Notice
+**No longer maintaining this repo**
+
+###Leetcode OJ
+
 My solutions to Leetcode Online Judge in Java
 
 Some useful website:
